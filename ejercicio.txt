@@ -1,0 +1,295 @@
+Me parece una muy buena idea, Miguel. De hecho, creo que es una de las mejores formas de aprender JavaScript. Yo actuaré como si fuera tu mentor: te iré guiando, pero el código lo escribirás tú. Solo te ayudaré cuando te atasques o quiera explicarte un concepto.
+
+Objetivo final
+
+Vamos a crear una Todo App con JavaScript puro (sin frameworks).
+
+Al finalizar sabrás trabajar con:
+
+Variables
+Objetos
+Arrays
+Funciones
+Eventos
+Manipulación del DOM
+LocalStorage
+Métodos de arrays (filter, map, find, etc.)
+Clases CSS desde JS
+Renderizado dinámico
+
+
+
+Fase 1. Crear la estructura HTML
+
+Objetivo: Tener únicamente el diseño.
+
+Debe contener:
+
+Un título.
+Un input para escribir la tarea.
+Un botón "Añadir".
+Una lista vacía donde aparecerán las tareas.
+
+No hagas todavía JavaScript.
+
+Cuando la tengas, comprueba que visualmente se ve bien.
+
+
+
+Fase 2. Conectar JavaScript
+
+Crea un archivo JS y comprueba que está enlazado.
+
+Haz una prueba sencilla:
+
+console.log("Todo App iniciada");
+
+Si aparece en la consola, seguimos.
+
+
+
+Fase 3. Capturar elementos del DOM
+
+Ahora tendrás que obtener referencias a:
+
+el input
+el botón
+la lista
+
+Aquí practicarás cosas como:
+
+document.getElementById()
+
+o
+
+document.querySelector()
+
+No te digo cuál usar. Decide tú.
+
+
+
+Fase 4. Detectar el clic
+
+Cuando pulses el botón, simplemente muestra en consola:
+
+Botón pulsado
+
+No hagas nada más.
+
+Aquí aprenderás:
+
+addEventListener
+eventos
+
+
+
+Fase 5. Leer el contenido del input
+
+Cuando pulses el botón:
+
+Comprar leche
+
+debe aparecer en consola.
+
+Todavía no lo metas en la lista.
+
+Solo:
+
+console.log(valorInput);
+
+
+
+Fase 6. Evitar tareas vacías
+
+Antes de hacer nada, piensa:
+
+¿Y si el usuario pulsa Añadir sin escribir nada?
+
+Tendrás que comprobarlo.
+
+Si está vacío:
+
+no añadir nada
+mostrar un mensaje o simplemente salir de la función.
+
+Aquí practicarás condicionales.
+
+
+
+Fase 7. Guardar las tareas
+
+Aquí empieza lo interesante.
+
+Crea un array.
+
+Algo parecido a:
+
+[]
+
+Cada vez que pulses el botón:
+
+["Comprar leche"]
+
+Después:
+
+["Comprar leche", "Estudiar JS"]
+
+Todavía NO las dibujes.
+
+Solo guarda la información.
+
+
+
+Fase 8. Dibujar la lista
+
+Aquí aparece un concepto MUY importante.
+
+El HTML ya no lo escribirás tú.
+
+Lo generará JavaScript.
+
+Cada vez que añadas una tarea tendrás que recorrer el array.
+
+Pregunta que debes hacerte:
+
+¿Qué método sirve para recorrer un array?
+
+Y por cada elemento tendrás que crear un <li>.
+
+
+
+Fase 9. Limpiar el input
+
+Después de añadir una tarea:
+
+el input debe quedar vacío
+el cursor debería volver al input
+
+Investiga cómo poner el foco otra vez.
+
+
+
+Fase 10. Añadir con Enter
+
+Ahora no solo funcionará el botón.
+
+También:
+
+Enter
+
+debe añadir la tarea.
+
+Aquí aprenderás eventos del teclado.
+
+
+
+Fase 11. Eliminar tareas
+
+Cada tarea tendrá un botón.
+
+Por ejemplo:
+
+Comprar leche      ❌
+
+Cuando pulses:
+
+❌
+
+la tarea desaparecerá.
+
+Aquí tendrás que pensar:
+
+¿Cómo sé cuál de todas las tareas debo borrar?
+
+
+
+Fase 12. Marcar como completada
+
+Al pulsar sobre una tarea:
+
+☐ Estudiar
+
+se convierte en
+
+☑ Estudiar
+
+Visualmente:
+
+tachada
+otro color
+etc.
+
+Aquí aprenderás a modificar clases desde JavaScript.
+
+
+
+Fase 13. Contador
+
+Mostrar algo como:
+
+3 tareas
+
+o
+
+1 tarea pendiente
+
+Cada vez que cambie el array deberá actualizarse.
+
+
+
+Fase 14. Filtro
+
+Tres botones:
+
+Todas
+
+Pendientes
+
+Completadas
+
+Aquí descubrirás uno de los métodos más usados:
+
+filter()
+Fase 15. LocalStorage
+
+Cuando cierres el navegador...
+
+...las tareas seguirán ahí.
+
+
+
+
+
+
+
+Aprenderás:
+
+guardar
+cargar
+convertir arrays a texto
+volver a convertirlos
+Fase 16. Mejoras (nivel portfolio)
+
+Cuando todo funcione, puedes añadir:
+
+Animaciones al añadir.
+Animación al borrar.
+Drag & Drop para ordenar.
+Prioridades (Alta, Media, Baja).
+Fecha límite.
+Buscador.
+Modo oscuro.
+Categorías.
+Barra de progreso.
+Estadísticas.
+Mi propuesta
+
+En lugar de hacerla de una vez, iremos por "misiones".
+
+Misión 1
+
+✅ Crear el HTML.
+✅ Enlazar el JS.
+✅ Mostrar "Todo App iniciada" en la consola.
+
+Cuando termines la misión 1, pégame tu código y lo revisaremos juntos. Si hay algo que mejorar, te haré preguntas para que tú mismo encuentres la solución, en lugar de darte la respuesta directamente. Así aprenderás mucho más.
