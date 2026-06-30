@@ -3,6 +3,7 @@ const addTaskButton = document.getElementById("addTaskButton");
 const taskList = document.getElementById("taskList");
 let tasks = [];
 let indice = 0;
+
 addTaskButton.addEventListener("click", function () {
     if (taskInput.value.trim().length === 0) return;
     const newTask = {
@@ -29,9 +30,9 @@ function renderTask(elementos) {
         taskItem.textContent = elementos[i].text;
         taskItem.classList.add("mt-1");
         if (elementos[i].done) {
-                taskItem.classList.add("line-through");
-                taskItem.classList.add("text-neutral-400"); 
-            } 
+            taskItem.classList.add("line-through");
+            taskItem.classList.add("text-neutral-400");
+        }
 
         deleteItem.textContent = "Borrar";
         deleteItem.className = "text-black px-8 py-1 bg-[#ff5050] rounded-md cursor-pointer ml-4";
@@ -41,12 +42,15 @@ function renderTask(elementos) {
             renderTask(tasks);
         });
 
+        // cambiamos el estado a done
+        taskItem.addEventListener("click", function () {
 
+            tasks = tasks.map(task =>
+                task.id === elementos[i].id
+                    ? { ...task, done: !task.done }
+                    : task
+            );
 
-
-        taskItem.addEventListener("click", function(){
-            
-            elementos[i].done = !elementos[i].done;
             renderTask(tasks);
         });
 
