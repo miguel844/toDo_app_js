@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-neutral-400: oklch(70.8% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -198,17 +199,11 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
-  .mr-7 {
-    margin-right: calc(var(--spacing) * 7);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
-  }
-  .ml-7 {
-    margin-left: calc(var(--spacing) * 7);
   }
   .table {
     display: table;
@@ -228,14 +223,8 @@
   .list-disc {
     list-style-type: disc;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-md {
     border-radius: var(--radius-md);
-  }
-  .rounded-xs {
-    border-radius: var(--radius-xs);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -243,9 +232,6 @@
   }
   .bg-\[\#ff5050\] {
     background-color: #ff5050;
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
@@ -259,17 +245,11 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
   .py-1 {
     padding-block: var(--spacing);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
@@ -282,11 +262,17 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-\[\#ff5050\] {
-    color: #ff5050;
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-neutral-400 {
+    color: var(--color-neutral-400);
   }
   .text-white {
     color: var(--color-white);
+  }
+  .line-through {
+    text-decoration-line: line-through;
   }
   .underline {
     text-decoration-line: underline;

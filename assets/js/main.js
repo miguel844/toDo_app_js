@@ -27,13 +27,26 @@ function renderTask(elementos) {
         const deleteItem = document.createElement("button");
 
         taskItem.textContent = elementos[i].text;
-        taskItem.className = "mt-1";
+        taskItem.classList.add("mt-1");
+        if (elementos[i].done) {
+                taskItem.classList.add("line-through");
+                taskItem.classList.add("text-neutral-400"); 
+            } 
 
         deleteItem.textContent = "Borrar";
-        deleteItem.className = "px-8 py-1 bg-[#ff5050] rounded-md cursor-pointer ml-4";
+        deleteItem.className = "text-black px-8 py-1 bg-[#ff5050] rounded-md cursor-pointer ml-4";
 
         deleteItem.addEventListener("click", function () {
             tasks = tasks.filter(task => task.id !== elementos[i].id);
+            renderTask(tasks);
+        });
+
+
+
+
+        taskItem.addEventListener("click", function(){
+            
+            elementos[i].done = !elementos[i].done;
             renderTask(tasks);
         });
 
