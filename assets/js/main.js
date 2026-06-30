@@ -12,13 +12,12 @@ addTaskButton.addEventListener("click", function () {
         done: false
     };
     tasks.push(newTask);
-    console.log(newTask);
     renderTask(tasks);
+    upgradeCounter();
 
     taskInput.value = "";
     taskInput.focus();
 });
-
 
 function renderTask(elementos) {
     taskList.innerHTML = "";
@@ -40,6 +39,7 @@ function renderTask(elementos) {
         deleteItem.addEventListener("click", function () {
             tasks = tasks.filter(task => task.id !== elementos[i].id);
             renderTask(tasks);
+            upgradeCounter();
         });
 
         // cambiamos el estado a done
@@ -52,13 +52,25 @@ function renderTask(elementos) {
             );
 
             renderTask(tasks);
+            upgradeCounter();
         });
 
         taskItem.appendChild(deleteItem);
         taskList.appendChild(taskItem);
     }
-
     taskInput.value = "";
     taskInput.focus();
 }
 
+const taskCounter = document.getElementById("taskCounter");
+
+function upgradeCounter() {
+    const total = tasks.length;
+    const pending = tasks.filter(task => !task.done).length;
+
+    if (pending === 0) {
+        taskCounter.textContent = "No hay tareas pendientes";
+    } else {
+        taskCounter.textContent = `${pending} tareas pendientes. (${total} total)`;
+    }
+}
